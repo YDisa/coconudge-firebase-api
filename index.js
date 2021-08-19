@@ -7,6 +7,7 @@
 // import { name as appName } from './app.json';
 import { Navigation } from "react-native-navigation";
 import HomeScreen from './screen/home'
+import ImageUploadScreen from "./screen/image-upload";
 import SignupScreen from "./screen/signup";
 import TodoList from "./screen/todoList";
 
@@ -14,6 +15,7 @@ import TodoList from "./screen/todoList";
 Navigation.registerComponent('Home', () => HomeScreen);
 Navigation.registerComponent('SignUp', () => SignupScreen);
 Navigation.registerComponent('TodoList', () => TodoList);
+Navigation.registerComponent('ImageUpload', () => ImageUploadScreen);
 Navigation.setDefaultOptions({
     statusBar: {
         backgroundColor: '#4d089a'

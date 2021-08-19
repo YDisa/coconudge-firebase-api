@@ -22,6 +22,21 @@ const HomeScreen = (props: any) => {
                 })
             }} />
             <View style={styles.paddingView}></View>
+            <Button title={"이미지업로드로 이동"} onPress={_ => {
+                Navigation.push(props.componentId, {
+                    component: {
+                        name: "ImageUpload",
+                        options: {
+                            topBar: {
+                                title: {
+                                    text: 'ImageUpload'
+                                }
+                            }
+                        }
+                    }
+                })
+            }} />
+            <View style={styles.paddingView}></View>
             <Button title={"Todo 리스트로 이동"} onPress={_ => {
                 Navigation.push(props.componentId, {
                     component: {
