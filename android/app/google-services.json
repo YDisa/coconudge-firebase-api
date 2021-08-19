@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1078275245493",
+    "project_id": "fir-education-aea0f",
+    "storage_bucket": "fir-education-aea0f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078275245493:android:64fc5f117f22e96fa885fc",
+        "android_client_info": {
+          "package_name": "com.firebaseapi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078275245493-e5r3n3rn76tlbb6r0u1ajr3oeu2n67jh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZL08fvVLl85mR7u27nurI3Vis6G80UBk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078275245493-e5r3n3rn76tlbb6r0u1ajr3oeu2n67jh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
