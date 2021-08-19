@@ -51,6 +51,51 @@ const HomeScreen = (props: any) => {
                     }
                 })
             }} />
+            <View style={styles.paddingView}></View>
+            <Button title={"구글로그인으로 이동"} onPress={_ => {
+                Navigation.push(props.componentId, {
+                    component: {
+                        name: "GoogleLogin",
+                        options: {
+                            topBar: {
+                                title: {
+                                    text: 'GoogleLogin'
+                                }
+                            }
+                        }
+                    }
+                })
+            }} />
+            <View style={styles.paddingView}></View>
+            <Button title={"이메일 로그인으로 이동"} onPress={_ => {
+                Navigation.push(props.componentId, {
+                    component: {
+                        name: "EmailLogin",
+                        options: {
+                            topBar: {
+                                title: {
+                                    text: 'EmailLogin'
+                                }
+                            }
+                        }
+                    }
+                })
+            }} />
+            <View style={styles.paddingView}></View>
+            <Button title={"휴대폰인증으로 이동"} onPress={_ => {
+                Navigation.push(props.componentId, {
+                    component: {
+                        name: "PhoneAuth",
+                        options: {
+                            topBar: {
+                                title: {
+                                    text: 'PhoneAuth'
+                                }
+                            }
+                        }
+                    }
+                })
+            }} />
         </View>
     );
 };

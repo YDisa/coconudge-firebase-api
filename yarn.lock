@@ -1217,6 +1217,11 @@
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
+"@react-native-firebase/auth@^12.7.0":
+  version "12.7.0"
+  resolved "https://registry.npmjs.org/@react-native-firebase/auth/-/auth-12.7.0.tgz#cfb78e89706463828a584c2da6ae4e8f3b5413ac"
+  integrity sha512-IWWeCwC/dvC9SB+2fMnWplPVoQ8iKUWmK0Tq6sb4bXlTlbQA8i4a3akZHYGhn4g0HYu8+RSWtdbaGEqh0STMWw==
+
 "@react-native-firebase/database@^12.7.0":
   version "12.7.0"
   resolved "https://registry.npmjs.org/@react-native-firebase/database/-/database-12.7.0.tgz#0d60a9f820d71833d1cff68e1e14620cde9df42b"
@@ -1226,6 +1231,11 @@
   version "12.7.0"
   resolved "https://registry.npmjs.org/@react-native-firebase/storage/-/storage-12.7.0.tgz#4035f43bc5a98892dbeaf0c24514c69491e81064"
   integrity sha512-VBXpge9Ut0IeGJbyK/4Abf5a7a9n53aFLksC/3nft0P2l7GwX74meIX9XcBPFqWnad8qX/BTC7qbsSYXzslsmQ==
+
+"@react-native-google-signin/google-signin@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.npmjs.org/@react-native-google-signin/google-signin/-/google-signin-6.0.1.tgz#c953c24c74c42009f59213015d4bdd4e58133c54"
+  integrity sha512-8Kyt3v6JcAQoJqZau3z4Mj+8R5Zv1yB8TfL/iCrB6ZI9lIR7gm4wuNzgpNSjX7OwNTboyhBek9Tjx8qJj7a6Mw==
 
 "@react-native/assets@1.0.0":
   version "1.0.0"

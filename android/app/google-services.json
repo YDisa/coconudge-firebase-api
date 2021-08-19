@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "1078275245493",
+    "firebase_url": "https://fir-education-aea0f-default-rtdb.firebaseio.com",
     "project_id": "fir-education-aea0f",
     "storage_bucket": "fir-education-aea0f.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "1078275245493-6on6jn311ivdb00h5lmbjjo20fsk4d77.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.firebaseapi",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
         {
           "client_id": "1078275245493-e5r3n3rn76tlbb6r0u1ajr3oeu2n67jh.apps.googleusercontent.com",
           "client_type": 3
