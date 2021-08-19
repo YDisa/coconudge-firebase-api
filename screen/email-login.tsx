@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Alert, Button, Text, TextInput, View } from 'react-native'
-import auth from '@react-native-firebase/auth';
 
 const EmailLoginScreen = () => {
     // Set an initializing state whilst Firebase connects
@@ -16,8 +15,6 @@ const EmailLoginScreen = () => {
     }
 
     useEffect(() => {
-        const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
-        return subscriber; // unsubscribe on unmount
     }, []);
 
     if (initializing) return null;
@@ -31,17 +28,7 @@ const EmailLoginScreen = () => {
                 <TextInput secureTextEntry={true} placeholder={"비밀번호를 입력해주세요."} value={password} onChangeText={setPassword} />
 
                 <Button title={"Login"} onPress={async (_) => {
-                    auth()
-                    .signInWithEmailAndPassword(email,password)
-                        .catch(error => {
 
-                            if (error.code === "auth/user-not-found"){
-                                Alert.alert("일치하는 유저가 없습니다.")
-                            }
-                            
-
-                            console.error(error);
-                        });
                 }} />
             </View>
         );
@@ -51,7 +38,7 @@ const EmailLoginScreen = () => {
         <View>
             <Text>Welcome {user !== undefined ? user.email : "없음"}</Text>
             <Button title={"로그아웃"} onPress={_ => {
-                auth().signOut();
+                
             }} />
         </View>
     );

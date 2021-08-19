@@ -11,23 +11,10 @@ const PhoneAuthScreen = () => {
             <Text>휴대폰 인증</Text>
             <TextInput value={phonNumber} onChangeText={setPhonNumber} placeholder={"휴대폰번호 입력"} />
             <Button title={"인증요청"} onPress={async (_) => {
-                const confirmation = await auth().signInWithPhoneNumber(`+82 ${phonNumber}`);
-                setConfirm(confirmation);
-                Alert.alert("전송되었습니다.")
             }} />
 
             <TextInput value={code} onChangeText={setCode} placeholder={"인증번호 입력"} />
             <Button title={"인증"} onPress={async (_) => {
-                if(confirm !== null){
-                    try {
-                        await confirm.confirm(code);
-                        Alert.alert("인증되었습니다.")
-                    } catch (error) {
-                        console.log('Invalid code.');
-                    }
-                }else{
-                    Alert.alert("잘못된 상황")
-                }
             }} />
         </View>
     )
