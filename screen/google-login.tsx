@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Button, Text, View } from 'react-native'
 import auth from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
-import analytics from '@react-native-firebase/analytics';
 
 GoogleSignin.configure({
     webClientId: '1078275245493-e5r3n3rn76tlbb6r0u1ajr3oeu2n67jh.apps.googleusercontent.com',
@@ -39,7 +38,6 @@ const GoogleLoginScreen = () => {
                     console.log("token : ",googleCredential.token);
                     console.log("secret : ",googleCredential.secret);
                     console.log("providerId : ",googleCredential.providerId);
-                    analytics().logLogin({method:"google"})
                     // Sign-in the user with the credential
                     return auth().signInWithCredential(googleCredential);
                 }} />

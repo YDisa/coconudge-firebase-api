@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Alert, Button, Text, TextInput, View } from 'react-native'
 import auth from '@react-native-firebase/auth';
-import analytics from '@react-native-firebase/analytics';
 
 const EmailLoginScreen = () => {
     // Set an initializing state whilst Firebase connects
@@ -43,7 +42,6 @@ const EmailLoginScreen = () => {
 
                             console.error(error);
                         });
-                    await analytics().logLogin({ method: "email" })
                 }} />
             </View>
         );
