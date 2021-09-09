@@ -26,6 +26,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import analytics from '@react-native-firebase/analytics';
 
 const Section: React.FC<{
   title: string;
@@ -62,6 +63,7 @@ const App = () => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
   useEffect(() => {
+    analytics().logAppOpen();
   })
   return (
     <SafeAreaView style={backgroundStyle}>
