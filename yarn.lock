@@ -1208,6 +1208,11 @@
   resolved "https://registry.npmjs.org/@react-native-community/eslint-plugin/-/eslint-plugin-1.1.0.tgz#e42b1bef12d2415411519fd528e64b593b1363dc"
   integrity sha512-W/J0fNYVO01tioHjvYWQ9m6RgndVtbElzYozBq1ZPrHO/iCzlqoySHl4gO/fpCl9QEFjvJfjPgtPMTMlsoq5DQ==
 
+"@react-native-firebase/analytics@^12.7.5":
+  version "12.7.5"
+  resolved "https://registry.npmjs.org/@react-native-firebase/analytics/-/analytics-12.7.5.tgz#317f6a6f02c4fd7e0913376f257e55df671eca2a"
+  integrity sha512-tBFKkQHrZv4TEjRIF62lvqa6d2bIJ3SKOoa2UW/zRPgyzp5yak9casfvokHdCwMk1jXNgHgVOYbg2jiwSldK4A==
+
 "@react-native-firebase/app@^12.7.0":
   version "12.7.0"
   resolved "https://registry.npmjs.org/@react-native-firebase/app/-/app-12.7.0.tgz#255c1fd38afb4cc11cf9786d0b210c73d3d24503"
