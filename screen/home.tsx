@@ -3,14 +3,42 @@ import { View, Text, Button, StyleSheet, TouchableOpacityBase, Alert } from 'rea
 import { Navigation } from "react-native-navigation";
 
 import analytics from '@react-native-firebase/analytics';
+import messaging from '@react-native-firebase/messaging';
+import PushNotification from 'react-native-push-notification'
 
+async function requestUserPermission() {
+    const authStatus = await messaging().requestPermission();
+    const enabled =
+        authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
+        authStatus === messaging.AuthorizationStatus.PROVISIONAL;
+
+    if (enabled) {
+        console.log('Authorization status:', authStatus);
+    }
+}
 
 const HomeScreen = (props: any) => {
     useEffect(() => {
         analytics().logAppOpen();
+        requestUserPermission();
     })
 
-    
+    useEffect(() => {
+        messaging().getInitialNotification().then(async remoteMessage=>{
+            console.log("message click",JSON.stringify(remoteMessage));
+            
+        })
+        const unsubscribe = messaging().onMessage(async remoteMessage => {
+            // Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
+            PushNotification.localNotification({
+                messageId: remoteMessage.messageId,
+                message: remoteMessage.notification?.body ?? "",
+                title: remoteMessage.notification?.title
+            })
+        });
+
+        return unsubscribe;
+    }, []);
     return (
         <View style={styles.root}>
             <Text>홈화면</Text>

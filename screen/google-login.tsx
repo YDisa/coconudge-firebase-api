@@ -3,6 +3,7 @@ import { Button, Text, View } from 'react-native'
 import auth from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import analytics from '@react-native-firebase/analytics';
+import messaging from '@react-native-firebase/messaging';
 
 GoogleSignin.configure({
     webClientId: '1078275245493-e5r3n3rn76tlbb6r0u1ajr3oeu2n67jh.apps.googleusercontent.com',
@@ -16,6 +17,9 @@ const GoogleLoginScreen = () => {
     // Handle user state changes
     async function onAuthStateChanged(user: any) {
         setUser(user);
+        const token = await messaging().getToken();
+        console.log("FCM token :", token);
+
         if (initializing) setInitializing(false);
     }
 
@@ -52,6 +56,7 @@ const GoogleLoginScreen = () => {
             <Text>Welcome {user !== undefined ? user.email : "없음"}</Text>
             <Button title={"로그아웃"} onPress={async(_) => {
                 await auth().signOut();
+                await messaging().deleteToken();
             }} />
         </View>
     );
