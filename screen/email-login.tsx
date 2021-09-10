@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Alert, Button, Text, TextInput, View } from 'react-native'
 import auth from '@react-native-firebase/auth';
 import analytics from '@react-native-firebase/analytics';
-import messaging from '@react-native-firebase/messaging';
 
 const EmailLoginScreen = () => {
     // Set an initializing state whilst Firebase connects
@@ -14,8 +13,6 @@ const EmailLoginScreen = () => {
     // Handle user state changes
     async function onAuthStateChanged(user: any) {
         setUser(user);
-        const token = await messaging().getToken();
-        console.log("FCM token :", token);
         if (initializing) setInitializing(false);
     }
 
@@ -57,7 +54,6 @@ const EmailLoginScreen = () => {
             <Text>Welcome {user !== undefined ? user.email : "없음"}</Text>
             <Button title={"로그아웃"} onPress={async (_) => {
                 await auth().signOut();
-                await messaging().deleteToken();
             }} />
         </View>
     );
