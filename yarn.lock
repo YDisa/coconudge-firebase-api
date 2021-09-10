@@ -1232,6 +1232,11 @@
   resolved "https://registry.npmjs.org/@react-native-firebase/database/-/database-12.7.0.tgz#0d60a9f820d71833d1cff68e1e14620cde9df42b"
   integrity sha512-r/ctOh4MbchYohwkraWagJM1Bgm8Eo4LOxBf/y2EMgY5Nj3EYeyM1NAj2HN/Gta393llj0lnDpKz60gQrZ6X7g==
 
+"@react-native-firebase/messaging@^12.7.5":
+  version "12.7.5"
+  resolved "https://registry.npmjs.org/@react-native-firebase/messaging/-/messaging-12.7.5.tgz#cfe61c5a2e9c562d9801d97825fafe3dd91044c8"
+  integrity sha512-HLsjmuI5ZcU0j6r1ttlcadeAS0+wIALzY1St5ITmJsQ/VzbGilzbr4oGTRZxAXBN8cHn4UyXl55MB62346OxFA==
+
 "@react-native-firebase/storage@^12.7.0":
   version "12.7.0"
   resolved "https://registry.npmjs.org/@react-native-firebase/storage/-/storage-12.7.0.tgz#4035f43bc5a98892dbeaf0c24514c69491e81064"
@@ -1794,6 +1799,11 @@
   version "15.7.4"
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
+
+"@types/react-native-push-notification@^7.3.2":
+  version "7.3.2"
+  resolved "https://registry.npmjs.org/@types/react-native-push-notification/-/react-native-push-notification-7.3.2.tgz#fa4ca52925ac82f8c2520b1524e02310493369c1"
+  integrity sha512-iTJJMdC8US/s8Q9VmMyHTsQl9ivAYijH0eHG2XU8LzxYBg0ItJmM7E5xzZcdARiJK8Hui2PDxceEHqS31BETvA==
 
 "@types/react-native@^0.64.5":
   version "0.64.13"
@@ -7195,6 +7205,11 @@ react-native-navigation@^7.18.1:
     react-lifecycles-compat "2.0.0"
     remx "3.x.x"
     tslib "1.9.3"
+
+react-native-push-notification@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.npmjs.org/react-native-push-notification/-/react-native-push-notification-8.1.0.tgz#16bb3755287a005cd8341c48535d9c78856b58b8"
+  integrity sha512-ZgRM1rYm+nhnACval7k44T28PwwtFdzG3pv/rhrVHgrioAbxzQOVFJOny956w42s5av4PPcKsr8yJ940HJCKTA==
 
 react-native@0.64.1:
   version "0.64.1"

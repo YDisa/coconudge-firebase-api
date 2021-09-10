@@ -10,6 +10,7 @@
 
 import React, { useEffect } from 'react';
 import {
+  Alert,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -26,7 +27,6 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import analytics from '@react-native-firebase/analytics';
 
 const Section: React.FC<{
   title: string;
@@ -62,9 +62,7 @@ const App = () => {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
-  useEffect(() => {
-    analytics().logAppOpen();
-  })
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />

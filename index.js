@@ -13,6 +13,12 @@ import SignupScreen from "./screen/signup";
 import TodoList from "./screen/todoList";
 import EmailLoginScreen from "./screen/email-login";
 import PhoneAuthScreen from "./screen/phone-auth";
+import messaging from '@react-native-firebase/messaging';
+
+// Register background handler
+messaging().setBackgroundMessageHandler(async remoteMessage => {
+    console.log('Message handled in the background!', remoteMessage);
+});
 
 // AppRegistry.registerComponent(appName, () => App);
 Navigation.registerComponent('Home', () => HomeScreen);
